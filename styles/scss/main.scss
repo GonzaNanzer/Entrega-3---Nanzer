@@ -1,0 +1,14 @@
+//recursos:
+@import './partials/base/reset';
+@import './partials/base/mixins';
+//index:
+@import './partials/components/header';
+@import './partials/components/principal';
+@import './partials/components/caracteristicas';
+@import './partials/components/usuarios';
+@import './partials/components/empresa';
+@import './partials/components/footer';
+//paginas:
+@import '../scss/partials/layouts/pageCaracteristicas';
+@import '../scss/partials/layouts/pageUsuarios';
+@import '../scss/partials/layouts/pageContacto';
