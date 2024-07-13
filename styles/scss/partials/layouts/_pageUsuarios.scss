@@ -19,6 +19,7 @@
             width: 60%;
             color: soften($color-contenido,5);
             font-size: larger;
+            margin: 10px;
 
             & .fraseResaltada{
                 @include resaltarFrase(none, none, italic);
@@ -37,6 +38,7 @@
             height: 300px;
             object-fit: cover;
             border-radius: 10px;
+            padding: 10px;
 
         }
 
