@@ -1,6 +1,9 @@
 .ePe__contenedor{
     background-image: linear-gradient(to bottom, $gradiente-1, $gradiente-4);
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     & .ePe__titulo{
         @include titulo-seccion;
@@ -10,36 +13,31 @@
 
     & .ePe__contenido{
         @include contenedor-flex (flex, row, auto, 100%, 100%);
-        @include cont-flex-layout(space-around, center, left);
+        @include cont-flex-layout(center, center, left);
 
         & .ePe__texto{
-            width: 40%;
+            width: 60%;
             color: soften($color-contenido,5);
             font-size: larger;
-            
-
-            & .disMouse{
-                color: darken($color-span,15);
-            }
 
             & .fraseResaltada{
-                @include resaltarFrase(underline, none, italic);
+                @include resaltarFrase(none, none, italic);
+                color: darken($color-span,30);
+                font-weight: 800;
             }
 
             @media (max-width:1250px){
                 width: 70%;
             }
+            
         }
 
         & .ePe__foto{
-            width: 600px;
+            width: 300px;
             height: 300px;
             object-fit: cover;
-            border-radius: 5px;
+            border-radius: 10px;
 
-            @media (max-width:1250px){
-                width: 70%;
-            }
         }
 
         @media (max-width:1250px){

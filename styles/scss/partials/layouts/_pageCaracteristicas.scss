@@ -1,16 +1,11 @@
 @import '../base/variables';
 
-@for $count from 1 through 4 {
-    .caract#{$count} {
-        display: flex;
-        @if $count != 4{
-            background-image: linear-gradient(to bottom, map-get($colores-gradiente, gradiente-#{$count}), map-get($colores-gradiente, gradiente-#{$count+1}));
-        }
-        @else{ background-image: linear-gradient(to bottom, map-get($colores-gradiente, gradiente-#{$count}), $gradiente-1);}
-    }
+body{
+    background-color: $gradiente-1 !important; //para evitar una pequeña linea blanca al final del documento
 }
 
-.caract1{
+.caracteristicas--titulo{
+    background-color: #d59648 !important;
     & .container-md{
         & .row{
             & .seccion__titulo{
@@ -20,6 +15,29 @@
     }
 }
 
-[class*="--caracteristicas"]{
-    background-color: #d59648 !important;
+@for $count from 1 through 4 {
+    .caract#{$count} {
+        display: flex;
+        @if $count != 4{
+            background-image: linear-gradient(to bottom, map-get($colores-gradiente, gradiente-#{$count}), map-get($colores-gradiente, gradiente-#{$count+1}));
+        }
+        @else{ background-image: linear-gradient(to bottom, map-get($colores-gradiente, gradiente-#{$count}), $gradiente-1);}
+
+        & .container-md{
+            & .col-md-3{
+                & img{
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }    
 }
+
+.footer__csspropio--caracteristicas{
+    background-color: $gradiente-1 !important;
+}
+
+
+
+

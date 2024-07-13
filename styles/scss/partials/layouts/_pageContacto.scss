@@ -3,8 +3,39 @@
     display: flex;
     justify-content: center;
 
+    @media (max-width:800px){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & .contacto__texto{
+        @include contenedor-flex (flex, column, relative, 80%, 70vh);
+        justify-content: center;
+        margin: 15px;
+
+        & .contacto__texto__titulo{
+            @include titulo-seccion;
+        }
+
+        & .contacto__texto__parrafo{
+            padding: 15px;
+            color: darken($color-contenido, 60);
+            font-size: larger;
+            text-align: center;
+
+            @media (max-width:800px){
+                padding: 0;
+            }
+        }
+
+        & .contacto__texto__parrafo--resaltar{
+            font-weight: 900;
+            color: white;
+        }
+    }
+
     & .contacto__imagen{
-        @include contenedor-flex (flex, column, relative, 80%, 60vh);
+        @include contenedor-flex (flex, column, relative, 80%, 70vh);
         justify-content: center;
         margin: 15px;
 
@@ -20,4 +51,8 @@
             @include elemento-absolute(10px, 0px, 0px, 0px, 0px, 2);
         }
     }
+}
+
+.footer__csspropio--contacto{
+    background-color: $gradiente-2 !important;
 }
