@@ -1326,8 +1326,9 @@ body {
 }
 .contacto .contacto__texto .contacto__texto__parrafo {
   padding: 15px;
-  color: #474747;
+  color: #fafafa;
   font-size: larger;
+  font-weight: 700;
   text-align: center;
 }
 @media (max-width: 800px) {
@@ -1361,7 +1362,8 @@ body {
   z-index: auto;
 }
 .contacto .contacto__imagen .contacto__transparencia {
-  background-color: rgba(114, 114, 97, 0.301);
+  display: flex;
+  background-color: rgba(114, 114, 97, 0.74);
   position: absolute;
   border-radius: 10px;
   top: 0px;
@@ -1369,6 +1371,7 @@ body {
   left: 0px;
   right: 0px;
   z-index: 2;
+  justify-content: center;
 }
 
 .footer__csspropio--contacto {

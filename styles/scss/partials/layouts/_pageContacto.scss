@@ -19,8 +19,9 @@
 
         & .contacto__texto__parrafo{
             padding: 15px;
-            color: darken($color-contenido, 60);
+            color: lighten($color-contenido,10);
             font-size: larger;
+            font-weight: 700;
             text-align: center;
 
             @media (max-width:800px){
@@ -47,8 +48,10 @@
         }
 
         & .contacto__transparencia{
-            background-color: rgba(114, 114, 97, 0.301);
+            display: flex;
+            background-color: rgba(114, 114, 97, 0.74);
             @include elemento-absolute(10px, 0px, 0px, 0px, 0px, 2);
+            justify-content: center;
         }
     }
 }
